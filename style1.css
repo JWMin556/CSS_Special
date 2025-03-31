@@ -1,0 +1,31 @@
+.flex-contaier {
+  width: 300px;
+  height: 200px;
+  background-color: #c4c4c4;
+  border: 1px solid black;
+
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;  부모 영역의 크기가 부족할 경우 줄바꿈을 한다 */
+
+  /* flex-flow: row wrap-reverse; 이렇게 flex-direction과 wrap을 동시에 쓸 수 있다. */
+  justify-content: space-around;
+  /* space-around는 해당 item들 좌우의 모든 나머지 공간을 균등하게 배치 */
+
+  /* align-items: stretch; */
+  /* align-items의 기본값은 stretch이며 이는 부모의 영역만큼 늘린다는 의미이다. 그런데 만약 item의 height를 개발자가 지정해주면 활성화 되지 않음 */
+  /* align-content: center; */
+}
+
+.flex-item {
+  width: 50px;
+  /* 비록 width를 직접 주었으나, 부모가 flex이므로 그 부모의 영역에 맞게 동적으로 변하게 됨 */
+  color: white;
+  background-color: #ff5252;
+  flex-shrink: 0; /* 공간이 부족하더라도 너의 넓이 그대로 차지하라. 즉, 부모의 공간을 무시하고 삐져나가고 싶으면 삐져나가라 ->  flex-shrink: 0*/
+  /* 또한 flex-shrink에 넣는 숫자들로 각각의 flex item들의 비율을 정리할 수도 있다.  */
+}
+
+.flex-item:nth-child(2n) {
+  background-color: #bf5e5e;
+}

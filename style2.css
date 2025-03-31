@@ -1,0 +1,72 @@
+* {
+  /* 이렇게 리셋을 준다고 생각하자 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f6f8fa;
+}
+
+/* 헤더 디자인 */
+.header {
+  background-color: #24292e;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* 참고로 class명에 언더바 두개 (__)를 사용한 이유: css속성명을 사용하는 B(block).E(element).M(modifier)이라는 방법론이다.  */
+/* 즉, 이 뜻은 header의 title이라는 아이템이라는 것이다 */
+/* BEM의 장점은 css의 자식 선택자같은 꼬리물기를 할 필요가 없어진다 */
+.header__title {
+  font-size: 1.5rem;
+}
+
+/* 레이아웃을 잡아보자 */
+.layout {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* 사이드 바 */
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.sidebar__nav ul {
+  list-style: none;
+}
+
+.sidebar__nav li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar__nav a {
+  text-decoration: none;
+  color: #0366d6;
+}
+
+/* 메인 */
+.main {
+  background-color: white;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+}
+
+/* 푸터 */
+.footer {
+  background-color: #24292e;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
